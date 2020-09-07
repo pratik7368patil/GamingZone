@@ -2,7 +2,7 @@ let data = [
 {
 	cardHead: "Hang Man",
 	cardBody: "The word to guess is represented by a row of dashes, representing each letter of the word. In most variants, proper nouns, such as names, places, and brands, are not allowed.",
-	url: "./src/HangMan/index.html"
+	url: "./src/Hang Man/index.html"
 },
 {
 	cardHead: "Math Clash",
@@ -12,7 +12,7 @@ let data = [
 {
 	cardHead: "Tic Tac Toe",
 	cardBody: "Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.",
-	url: "./src/TicTacToe/index.html"
+	url: "./src/Tic Tac Toe/index.html"
 },
 {
 	cardHead: "Dummy Card",
