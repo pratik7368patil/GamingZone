@@ -1,0 +1,168 @@
+* {
+	font-family: sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url(../images/back.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+}
+
+.navbar {
+	height: 10%;
+	display: flex;
+	/*justify-content: center;*/
+	align-items: center;
+}
+
+.nav-head {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.main-section {
+	height: 88%;
+	width: 100%;
+}
+
+.row {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.col {
+	height: 100%;
+	width: 48%;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.align-center {
+	justify-content: center;
+}
+
+.pl-4 {
+	padding-left: 40px;
+}
+
+.ml-4 {
+	margin-left: 40px;
+}
+
+.main-head {
+	font-size: 60px;
+	font-weight: bold;
+}
+
+.heading {
+	font-size: 60px;
+	font-weight: bold;
+}
+
+.mt-3 {
+	margin-top: 30px;
+}
+
+.main-para {
+	color: lightgray;
+	font-size: 25px;
+}
+
+.mb-4 {
+	margin-bottom: 40px;
+}
+
+.mr-2 {
+	margin-right: 20px;
+}
+
+.hide {
+	display: none;
+}
+
+.custom-btn {
+	font-size: 20px;
+	padding: 10px 0px 10px 0px;
+	width: 250px;
+	background: white;
+	color: black;
+	border: 2px solid #1b1b1b;
+	cursor: pointer;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+	transition-property: background, color;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;
+}
+
+.custom-btn:focus {
+	outline: none;
+}
+
+.custom-btn:hover {
+	background: #1b1b1b;
+	color: white;
+}
+
+.card-col {
+	overflow-y: scroll;
+}
+
+.animated-col {
+	transition: all;
+	transition-duration: 0.8s;
+	transition-timing-function: linear;
+}
+
+.card {
+	width: 45%;
+	height: 350px;
+	padding: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+	position: relative;
+	color: white;
+	background-color: rgba(255, 255, 255, 0.3);
+	-webkit-backdrop-filter: blur(20px);
+  	backdrop-filter: blur(20px);  
+}
+
+.card-head {
+	font-weight: bold;
+}
+
+.card-body {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.card-btn {
+	position: absolute;
+	bottom: 10%;
+}
+
+.custom-card-btn {
+	padding: 10px;
+	border: 2px solid #1b1b1b;
+	cursor: pointer;
+	background: #1b1b1b;
+	color: white;
+	transition-property: background, color;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;
+	text-decoration: none;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card-btn:hover {
+	background: white;
+	color: black;
+}

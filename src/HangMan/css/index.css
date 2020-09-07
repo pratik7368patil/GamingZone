@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Open+Sans&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  /*  background: rgb(205, 216, 236);
+  background-image: linear-gradient(to bottom, #3d3b5275, transparent);
+  /*height: 100%;*/
+}
+
+/*body-main {
+  background-position: center;
+  background-image: url("../images/new2.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background;
+  transition-duration: 1.5s;
+  transition-timing-function: linear;
+}*/
+
+.anti-row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  color: lightgrey;
+  padding-right: 0;
+  padding-left: 0;
+  background-position: center;
+  background-image: linear-gradient(to right, #1b1b1b, transparent),
+    linear-gradient(to left, #1b1b1b, transparent), url("../images/newback.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition-property: background;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+
+.all-cell {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cell {
+  border-bottom: 4px solid #ffe680;
+  width: 60px;
+  height: 50px;
+  max-height: 50px;
+  margin: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+
+.main-head,
+.main-container p {
+  margin-left: 20px;
+}
+
+.custom-btn-main {
+  color: white;
+  margin-left: 20px;
+  background: transparent;
+  border: 1px solid #ffe680;
+  border-radius: 0px;
+  max-width: 250px;
+}
+
+.custom-btn-main:hover {
+  color: white;
+  border: 1px solid royalblue;
+}
+
+.main-side {
+  height: 100vh;
+}
+
+.col-lg-4 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.col-top-4 {
+  background: #ffe680;
+  height: 65%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.head-col-top-4 {
+  font-weight: bold;
+}
+
+.col-bottom-4 {
+  height: 35%;
+  width: auto;
+}
+
+.main-head-top {
+  padding: 30px 0 0 0;
+}
+
+.card {
+  display: block;
+  border: 0px;
+  width: 100%;
+  transition: background;
+  transition-duration: 1.5s;
+  transition-timing-function: linear;
+  border-radius: 0px;
+}
+
+.d-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  border-radius: 0;
+  border: 0;
+  border-bottom: 2px solid #45555cc5;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  outline: 0;
+}
+
+.input-field {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.word-input {
+  background: transparent;
+  border-bottom: 2px solid #45555cc5;
+  color: #ffe680;
+  max-width: 250px;
+}
+
+.word-input:focus {
+  background: transparent;
+  border-bottom: 2px solid #ffe680;
+}
+
+.custom-btn {
+  border: 1px solid royalblue;
+  border-radius: 0px;
+  padding: 10px;
+  background-color: #1b1b1b;
+  color: whitesmoke;
+}
+
+.custom-btn:hover {
+  background: white;
+  color: #1b1b1b;
+}
+.player-info,
+.reward_count {
+  font-size: 20px;
+}
+
+.reward-and-other {
+  margin-bottom: 100px;
+}
+#reward_count {
+  font-size: 30px;
+}
+
+.key-cell {
+  margin: 2px;
+  color: black;
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  background: #ffe680a4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  transition-property: background, color;
+  transition-timing-function: linear;
+}
+
+.key-cell:hover {
+  background: black;
+  color: white;
+}
+
+@media (max-width: 550px) {
+  .key-cell {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 450px) {
+  .all-cell {
+    padding: 10px;
+  }
+
+  .cell {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .key-cell {
+    font-size: 15px;
+    height: 30px;
+    width: 30px;
+    margin: 1px;
+  }
+  .reward-and-other {
+    margin-bottom: 80px;
+  }
+  .player-info,
+  .reward_count {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+
+    <title>Math Clash</title>
+  </head>
+  <body>
+
+    <div class="music-btn" id="music_btn">
+      <div class="stop hide" id="stop">
+        <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-stop-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5z"/>
+        </svg>
+      </div>
+      <div class="play" id="play">
+        <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-play-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+        </svg>
+      </div>
+    </div>
+
+
+    <section class="main-container" id="main_form_container">
+      <div
+        class="row anti-row d-flex justify-content-center align-items-center"
+      >
+        <div class="card">
+          <div class="card-body">
+            <div class="form-group">
+              <label for="player">Player Name</label>
+              <input
+                type="text"
+                name="player"
+                id="player"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="level">Game Level</label>
+              <select
+                name="level"
+                id="level"
+                class="form-control custom-select"
+              >
+                <option value="easy" selected>Easy</option>
+                <option value="mid">Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <button class="btn custom-btn" onclick="startGame()">
+                Start Game
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-section hide" id="main_game_container">
+      <div class="custom-row">
+        <div class="target">Target <span id="target"></span></div>
+        <div class="score">
+          <span>Score: <span id="score">0</span></span>
+          <span class="best-score"
+            >Best Till Now: <span id="best_score">0</span></span
+          >
+        </div>
+        <div class="current-sum">Sum <span id="current_sum">0</span></div>
+      </div>
+      <div class="all-cell-main">
+        <div class="all-cell" id="all_cell"></div>
+      </div>
+      <div class="stop-btn mt-4 hide" id="try_btn">
+        <button class="btn custom-btn">Try Again</button>
+        <button class="btn custom-btn ml-4" onclick="window.location.reload()">
+          Exit game
+        </button>
+      </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="./js/index.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

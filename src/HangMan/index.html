@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <title>Hang Man</title>
+  </head>
+  <body class="body-main">
+    <section class="#">
+      <div
+        class="row anti-row d-flex justify-content-center align-items-center"
+      >
+        <div class="col-lg-8 main-container" id="main_container">
+          <div class="hide" id="all_cell">
+            <div class="row anti-row reward-and-other" id="reward_and_other">
+              <div
+                class="col-md-4 mt-2 mb-2 d-flex justify-content-center align-items-center"
+              >
+                <div class="player-info">
+                  <strong>Hello, <span id="player_info"></span></strong>
+                </div>
+              </div>
+              <div
+                class="col-md-4 mt-2 mb-2 d-flex justify-content-center align-items-center"
+              >
+                <div class="lifeline">
+                  <span id="life_1">&#10084;&#65039;</span>
+                  <span id="life_2">&#10084;&#65039;</span>
+                  <span id="life_3">&#10084;&#65039;</span>
+                  <span id="life_4">&#10084;&#65039;</span>
+                  <span id="life_5">&#10084;&#65039;</span>
+                </div>
+              </div>
+              <div
+                class="col-md-4 mt-2 mb-2 mb-2 d-flex justify-content-center"
+              >
+                <div
+                  class="reward d-flex justify-content-center align-items-center"
+                >
+                  <svg
+                    width="30px"
+                    height="30px"
+                    viewBox="0 0 16 16"
+                    class="bi bi-gift-fill"
+                    fill="#ffe680"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3z"
+                    />
+                    <path
+                      d="M15 7v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7h6zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9H2.5z"
+                    />
+                  </svg>
+                  <span id="reward_count"></span>
+                </div>
+              </div>
+            </div>
+            <div class="all-cell" id="main_cell"></div>
+            <div class="input-field" id="input_field"></div>
+          </div>
+          <div class="#" id="main_container_in">
+            <h1 class="main-head">Welcome to awesome HangMan</h1>
+            <p>Hangman is wierd game! Guess the word and earn rewards.</p>
+            <button class="btn custom-btn-main">Play Multiplayer</button>
+          </div>
+        </div>
+        <div class="col-lg-4 main-side">
+          <div class="row anti-row col-top-4">
+            
+            <h3 class="head-col-top-4">How to Play?</h3>
+            <p>
+              Hangman is a paper and pencil guessing game for two or more
+              players. One player thinks of a word, phrase or sentence and the
+              other(s) tries to guess it by suggesting letters within a certain
+              number of guesses.
+            </p>
+          </div>
+          <div class="row anti-row col-bottom-4">
+            <div class="card" id="card-main">
+              <div class="card-body">
+                <div class="form-group" id="start_form">
+                  <label for="player"><strong>Player Name</strong></label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="player"
+                    name="player"
+                  />
+                </div>
+                <div class="form-group text-center mt-4" id="start_form_btn">
+                  <button class="btn custom-btn" id="start_btn">
+                    Start Game
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <script src="./js/index.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
