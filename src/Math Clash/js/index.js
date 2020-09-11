@@ -62,6 +62,36 @@ let musicBtn = document.getElementById('music_btn');
 musicBtn.addEventListener('click', checkMusic);
 
 
+const removeAlert = () => {
+  let alert = document.getElementById('alert');
+  document.body.removeChild(alert);
+};
+
+const createAlert = (txt) => {
+  let newAlert = document.createElement('div');
+  newAlert.classList.add('alert');
+  newAlert.setAttribute('id', 'alert');
+  let newAlertBody = document.createElement('div');
+  newAlertBody.classList.add('alert-body');
+  newAlertBody.innerHTML = txt;
+  let newBtn = document.createElement('button');
+  newBtn.innerHTML = "Close";
+  newBtn .classList.add('custom-btn');
+  newBtn .classList.add('mt-3');
+  newBtn.addEventListener('click', () => removeAlert());
+
+
+  newAlertBody.appendChild(newBtn);
+  newAlert.appendChild(newAlertBody);
+  return newAlert;
+};
+
+const showAlert = (txt) => {
+  let getAlert = createAlert(txt);
+  document.body.appendChild(getAlert);
+};
+
+
 const getTarget = () => {
   return Math.ceil(10 + Math.random() * 60);
 };
@@ -262,9 +292,7 @@ const startTime = (levelTime) => {
       clearInterval(intervalId);
       playMusic(false);
       gameOverAudio.play();
-      setTimeout(() => {
-        alert("Game Over!");
-      }, 100);
+      showAlert("Game Over!");
       return;
     }
   }, levelTime * 1000); // time as per level
@@ -279,22 +307,16 @@ const delayAtStart = (level_time) => {
   }, 3000); // three second Delay
 };
 
-const stopGame = () => {
-  if (gameOver) {
-    return;
-  }
-  clearInterval(intervalId);
-  alert("Game Over, By Player!");
-};
-
 const startGame = () => {
   if (gameOver) {
     return;
   }
 
+  clickAudio.play();
+
   playerName = document.getElementById("player").value;
   if (playerName === "") {
-    alert("Player Name Required!");
+    showAlert("Player Name Required!");
     return;
   }
   level = document.getElementById("level").value;
@@ -311,6 +333,7 @@ const startGame = () => {
     delayAtStart(7);
   }
   playMusic(true); // to start music
+  checkMusic();
 };
 
 // add event listener to try again btn
@@ -350,4 +373,5 @@ const enableTryAgain = () => {
   }
   document.getElementById("try_btn").classList.add("hide"); // disable try btn
   playMusic(true);
+  checkMusic();
 };
