@@ -1,23 +1,23 @@
 let data = [
 {
 	cardHead: "Hang Man",
-	cardBody: "The word to guess is represented by a row of dashes, representing each letter of the word. In most variants, proper nouns, such as names, places, and brands, are not allowed.",
+	cardBody: "The word to guess is represented by a row of dashes, representing each letter of the word.",
 	url: "./src/Hang Man/index.html"
 },
 {
 	cardHead: "Math Clash",
-	cardBody: "Math Clash game is an entertaining game for people who love maths ! this math problem solving game keeps you entertaining all day when you play it with your friends and family.",
+	cardBody: "Math Clash game is an entertaining game for people who love maths ! ",
 	url: "./src/Math Clash/index.html"
 },
 {
 	cardHead: "Tic Tac Toe",
-	cardBody: "Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.",
+	cardBody: "Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid.",
 	url: "./src/tic-tac-toe/index.html"
 },
 {
-	cardHead: "Dummy Card",
-	cardBody: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-	url: "#"
+	cardHead: "Bomber Man",
+	cardBody: "Bomberman is an arcade-style maze-based video game.",
+	url: "./src/Bomber Man/index.html"
 },
 ]
 
