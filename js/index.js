@@ -26,38 +26,33 @@ const createCard = (dataObj) => {
 	let card = document.createElement('div');
 	card.classList.add('card');
 	card.classList.add('mr-2');
-	let cardhead = document.createElement('div');
-	cardhead.classList.add('card-head');
-	cardhead.innerHTML = dataObj.cardHead;
+
 	let cardbody = document.createElement('div');
 	cardbody.classList.add('card-body');
-	cardbody.innerHTML = dataObj.cardBody;
-	let cardbtn = document.createElement('div');
-	cardbtn.classList.add('card-btn')
+
+	let newData = document.createElement('p');
+	newData.innerHTML = dataObj.cardBody;
+	
+	let cardhead = document.createElement('div');
+	cardhead.classList.add('card-title');
+	cardhead.innerHTML = dataObj.cardHead;
+
 	let preview = document.createElement('a');
-	preview.classList.add('custom-card-btn');
+	preview.classList.add('btn');
+	preview.classList.add('card-btn');
 	preview.href = dataObj.url;
 	preview.target = "_blank";
 	preview.innerHTML = "PREVIEW";
 
-	cardbtn.appendChild(preview);
-	card.appendChild(cardhead);
+	cardbody.appendChild(cardhead);
+	cardbody.appendChild(newData);
+	cardbody.appendChild(preview);
+
 	card.appendChild(cardbody);
-	card.appendChild(cardbtn);
+
 	return card;
 };
 
-
-const createRow = (dataObj_1, dataObj_2) => {
-	let row = document.createElement('div');
-	row.classList.add('row');
-	row.classList.add('mb-4');
-
-	row.appendChild(createCard(dataObj_1));
-	row.appendChild(createCard(dataObj_2));
-
-	return row;
-};
 
 let exploreBtn = document.getElementById('explore');
 
@@ -66,12 +61,13 @@ const explore = () => {
 	if(explored) {
 		return;
 	}
-	exploreBtn.disabled = true;
+
+	let mainSection = document.getElementById('main_head_section');
+	mainSection.classList.add('hide');
 	let allCards = document.getElementById('all_cards');
-	allCards.classList.remove('hide');
 	allCards.classList.add('card-col');
-	for(let i=0; i<data.length; i+=2) {
-		allCards.appendChild(createRow(data[i], data[i+1]));
+	for(let i=0; i<data.length; i++) {
+		allCards.appendChild(createCard(data[i]));
 	}
 	explored = true;
 };

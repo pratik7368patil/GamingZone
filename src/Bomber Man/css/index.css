@@ -47,7 +47,8 @@ body {
 	text-transform: uppercase;
 	border: 1px solid black;
 	border-radius: 0px;
-	background: transparent;
+	color: #dcf4f4;
+	background: #252626;
 }
 
 .custom-btn:hover {
@@ -57,21 +58,6 @@ body {
 .custom-btn:focus {
 	outline: none;
 	box-shadow: none;
-}
-
-@media (max-width: 400px) {
-	.logo {
-		width: 100px;
-		height: 100px;
-	}
-
-	.main-head {
-		font-size: 35px;
-	}
-
-	.main-para {
-		font-size: 18px;
-	}	
 }
 
 .grid {
@@ -121,39 +107,6 @@ body {
 	display: none;
 }
 
-@media (max-width: 910px) {
-	.row {
-		height: 50px;
-		width: 60%;
-	}
-}
-
-@media (max-width: 780px) {
-	.row {
-		width: 80%;
-	}
-}
-
-@media (max-width: 580px) {
-	.row {
-		height: 40px;
-		width: 65%;
-	}
-}
-
-@media (max-width: 480px) {
-	.row {
-		width: 80%;
-	}
-}
-
-@media (max-width: 388px) {
-	.row {
-		height: 30px;
-		width: 100%;
-	}
-}
-
 .alert {
   position: absolute;
   top: 0;
@@ -179,8 +132,8 @@ body {
   border-radius: 5px;
   color: white;
   background-color: rgba(255, 255, 255, 0.1);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: blur(80px);
+  backdrop-filter: saturate(180%) blur(80px);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -193,10 +146,11 @@ body {
 
 .alert-btn {
 	margin: 10px;
+	text-transform: uppercase;
 	background: transparent;
 	border: 1px solid white;
 	color: white;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .alert-btn:hover {
@@ -223,4 +177,59 @@ body {
 	bottom: 5%;
 	right: 5%;
 	background-image: url(../images/playicon.svg);
+}
+
+@media (max-width: 400px) {
+	.logo {
+		width: 100px;
+		height: 100px;
+	}
+
+	.main-head {
+		font-size: 35px;
+	}
+
+	.main-para {
+		font-size: 18px;
+	}	
+}
+
+@media (max-width: 910px) {
+	.row {
+		height: 50px;
+		width: 60%;
+	}
+}
+
+@media (max-width: 780px) {
+	.row {
+		width: 80%;
+	}
+}
+
+@media (max-width: 580px) {
+	.row {
+		height: 40px;
+		width: 65%;
+	}
+
+	.alert-body {
+  		width: 80%;
+	}
+}
+
+@media (max-width: 480px) {
+	.row {
+		width: 80%;
+	}
+}
+
+@media (max-width: 388px) {
+	.row {
+		height: 30px;
+		width: 100%;
+	}
+	.alert-body {
+  		width: 90%;
+	}
 }

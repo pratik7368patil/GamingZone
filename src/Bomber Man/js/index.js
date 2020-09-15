@@ -121,7 +121,9 @@ const handleClick = function(event) {
 			event.target.classList.add('wrong');
 			gameOver = true;
 			explodeAudio.play();
-			checkMusic();
+			if(musicStatus) {
+				checkMusic();
+			}
 			showAlert('Game Over');
 			return;
 		}
