@@ -95,14 +95,26 @@ body {
 	border-radius: 2px;
 	background-color: #252626;
 	cursor: pointer;
+	background-image: url(../images/gift.svg);
+	background-size: 30px;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .correct {
 	background-color: #0CB04A;
+	background-image: url(../images/reward.svg);
+	background-size: 30px;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .wrong {
 	background-color: #c41e3a;
+	background-image: url(../images/bomb.svg);
+	background-size: 30px;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .hide {

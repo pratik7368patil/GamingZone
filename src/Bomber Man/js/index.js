@@ -8,11 +8,13 @@ let explodeAudio = new Audio('./sounds/explode.mp3');
 explodeAudio.volume = 0.2;
 let musicAudio = new Audio('./sounds/music.mp3');
 musicAudio.volume = 0.2;
+musicAudio.loop = true;
 let winAudio = new Audio('./sounds/win.mp3');
 winAudio.volume = 0.3;
 
 
 const playMusic = function() {
+	musicAudio.currentTime = 0;
 	musicStatus = true;
 	musicAudio.play();
 }
