@@ -19,6 +19,11 @@ let data = [
 	cardBody: "Bomberman is an arcade-style maze-based video game.",
 	url: "./src/Bomber Man/index.html"
 },
+{
+	cardHead: "Bomber Man Pro",
+	cardBody: "Bomberman is an arcade-style maze-based video game.",
+	url: "./src/Bomber Man Pro/index.html"
+},
 ]
 
 
