@@ -102,6 +102,13 @@ const removeAlert = () => {
 	document.body.removeChild(getAlert);
 }
 
+const disposeAllBombs = () => {
+	for(let idx in blackList) {
+		let ele = document.getElementById(`${blackList[idx].row}${blackList[idx].col}`);
+		ele.classList.add('wrong');
+	}
+}
+
 const handleClick = function(event) {
 	if(gameOver) {
 		return;
@@ -119,6 +126,7 @@ const handleClick = function(event) {
 	for(let idx in blackList) {
 		if(blackList[idx].row === clickedRowidx && blackList[idx].col === clickedColidx) {
 			event.target.classList.add('wrong');
+			disposeAllBombs();
 			gameOver = true;
 			explodeAudio.play();
 			if(musicStatus) {
@@ -132,7 +140,7 @@ const handleClick = function(event) {
 	event.target.classList.add('correct');
 	scoreTillNow += 10;
 	if(scoreTillNow >= 710) {
-		showAlert('You Won the Game');
+		showAlert('You Wan the Game');
 		winAudio.play();
 		gameOver = true;
 	}
@@ -155,6 +163,7 @@ const createAndShowGrid = function(row, col) {
 		for(let j=0; j<col; j++) {
 			let makeCol = document.createElement('div');
 			makeCol.addEventListener('click', (event) => handleClick(event));
+			makeCol.id = `${i}${j}`;
 			makeCol.setAttribute('row', i);
 			makeCol.setAttribute('col', j);
 			makeCol.classList.add('col');

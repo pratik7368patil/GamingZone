@@ -129,37 +129,78 @@ const getHint = function(event) {
 
 	console.log( "Clicked Co ordinates",currentRow, currentCol);
 
-	if(currentRow > 0 && currentCol > 0 && currentCol < 8 && currentRow < 8) {
-		// for diagonals
-		console.log('Checking Diagonals');
+	
+	// for diagonals
+	console.log('Checking Diagonals');
+	try {
 		if(checkBombs(currentRow+1, currentCol+1)) {
 			count++;
 		}
+	} catch {
+		console.log('In valid coordinates');
+	}
+
+	try {
 		if(checkBombs(currentRow-1, currentCol-1)) {
 			count++;
 		}
+	} catch {
+		console.log('In valid coordinates');
+	}
+
+	try {
 		if(checkBombs(currentRow+1, currentCol-1)) {
 			count++;
 		}
+	} catch {
+		console.log('In valid coordinates');
+	}
+
+	try {
 		if(checkBombs(currentRow-1, currentCol+1)) {
 			count++;
 		}
+	} catch {
+		console.log('In valid coordinates');
+	}
 
-		console.log('Checking Axis');
-		// for axis coordinates
+
+	console.log('Checking Axis');
+	// for axis coordinates
+
+	try {
 		if(checkBombs(currentRow+1, currentCol)) {
 			count++;
 		}
+	} catch {
+		console.log('In valid coordinates');
+	}
+
+	try {
 		if(checkBombs(currentRow-1, currentCol)) {
 			count++;
 		}
+	} catch {
+		console.log('In valid coordinates');
+	}
+
+	try {
 		if(checkBombs(currentRow, currentCol-1)) {
 			count++;
 		}
+	} catch {
+		console.log('In valid coordinates');
+	}
+
+	try {
 		if(checkBombs(currentRow, currentCol+1)) {
 			count++;
 		}
+	} catch {
+		console.log('In valid coordinates');
 	}
+
+	
 	// try to do it for edge cases 
 	return count;
 };
@@ -199,7 +240,7 @@ const handleClick = function(event) {
 	event.target.innerText = getHint(event);
 	scoreTillNow += 10;
 	if(scoreTillNow >= 710) {
-		showAlert('You Won the Game');
+		showAlert('You Wan the Game');
 		winAudio.play();
 		gameOver = true;
 	}
