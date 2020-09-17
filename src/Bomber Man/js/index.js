@@ -132,7 +132,7 @@ const handleClick = function(event) {
 	event.target.classList.add('correct');
 	scoreTillNow += 10;
 	if(scoreTillNow >= 710) {
-		showAlert('You Wan the Game');
+		showAlert('You Won the Game');
 		winAudio.play();
 		gameOver = true;
 	}
