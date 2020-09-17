@@ -10,7 +10,7 @@ body {
 	box-sizing: border-box;
 	height: 100vh;
 	width: 100vw;
-	background-color: #dcf4f4; /*#252626 color for dark mode*/
+	background-image: linear-gradient(to bottom, #d6e0f0, #8d93ab); /*#252626 color for dark mode*/
 	position: relative;
 }
 

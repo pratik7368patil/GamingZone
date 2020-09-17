@@ -181,7 +181,8 @@ const handleClick = function(event) {
 
 	for(let idx in blackList) {
 		if(blackList[idx].row === clickedRowidx && blackList[idx].col === clickedColidx) {
-			event.target.classList.add('wrong');
+			event.target.setAttribute('class', 'wrong');
+			event.target.classList.add('col');
 			disposeAllBombs();
 			gameOver = true;
 			explodeAudio.play();
@@ -193,7 +194,8 @@ const handleClick = function(event) {
 		}
 	}
 
-	event.target.classList.add('correct');
+	event.target.setAttribute('class', 'correct');
+	event.target.classList.add('col');
 	event.target.innerText = getHint(event);
 	scoreTillNow += 10;
 	if(scoreTillNow >= 710) {
@@ -211,6 +213,11 @@ const removeMainSection = function() {
 	grid.classList.remove('hide');
 };
 
+const setWarning = function(event) {
+	event.target.classList.add('warning');
+	event.preventDefault();
+}
+
 const createAndShowGrid = function(row, col) {
 	let grid = document.getElementById('grid');
 
@@ -220,6 +227,7 @@ const createAndShowGrid = function(row, col) {
 		for(let j=0; j<col; j++) {
 			let makeCol = document.createElement('div');
 			makeCol.addEventListener('click', (event) => handleClick(event));
+			makeCol.addEventListener('contextmenu', (event) => setWarning(event), false);
 			makeCol.id = `${i}${j}`;
 			makeCol.setAttribute('data-row', i);
 			makeCol.setAttribute('data-col', j);

@@ -10,7 +10,7 @@ body {
 	box-sizing: border-box;
 	height: 100vh;
 	width: 100vw;
-	background-color: #3f322b; /*#dcf4f4 color for light mode*/
+	background-image: linear-gradient(to bottom, #5eaaa8, #056676); /*#dcf4f4 color for light mode*/
 	color: white;
 	position: relative;
 }
@@ -40,7 +40,7 @@ body {
 
 .main-para {
 	font-size: 20px;
-	color: gray;
+	color: #e8ded2;
 }
 
 .custom-btn {
@@ -102,6 +102,14 @@ body {
 .wrong {
 	background-color: #c41e3a;
 	background-image: url(../images/bomb.svg);
+	background-size: 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.warning {
+	background-color: #ffe5b4;
+	background-image: url(../images/warning.svg);
 	background-size: 30px;
 	background-position: center;
 	background-repeat: no-repeat;
