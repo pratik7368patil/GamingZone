@@ -48,6 +48,12 @@ body {
 	height: 100%;
 }
 
+.upper-btn-div {
+	max-width: 262px;
+	padding: 5px;
+	border: 1px solid #c41e3a;
+}
+
 .custom-btn {
 	min-width: 250px;
 	min-height: 50px;
@@ -137,6 +143,12 @@ body {
 	.custom-btn {
 		min-width: 150px;
 		height: 45px;
+	}
+	
+	.upper-btn-div {
+		width: 162px;
+		padding: 5px;
+		border: 1px solid #c41e3a;
 	}
 }
 

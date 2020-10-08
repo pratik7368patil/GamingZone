@@ -10,7 +10,12 @@ let data = [
 	url: "./src/Math Clash/index.html"
 },
 {
-	cardHead: "Tic Tac Toe",
+	cardHead: "3x3 - Tic Tac Toe",
+	cardBody: "Tic-tac-toe with unbeatable computer, Xs and Os is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid.",
+	url: "./src/ai-tic-tac-toe/index.html"
+},
+{
+	cardHead: "NxN Tic Tac Toe",
 	cardBody: "Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid.",
 	url: "./src/tic-tac-toe/index.html"
 },

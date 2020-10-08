@@ -42,9 +42,12 @@ musicBtn.addEventListener('click', () => checkMusic());
 
 // Music Btn Trigger End Here
 
+// random 
 const generateRandom = function(limit) {
 	return (Math.random() * limit).toFixed();
 };
+
+// this will return 10 random indexes
 
 const getRandomIndexes = function(noOfIdx, limit) {
 	let obj = {};
