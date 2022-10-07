@@ -1,159 +1,162 @@
 * {
-	font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	height: 100vh;
-	width: 100%;
-	background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url(../images/back.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(../images/back.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
-	color: white;
+  color: white;
 }
 
 .navbar {
-	height: 5%;
-	display: flex;
-	/*justify-content: center;*/
-	align-items: center;
+  height: 5%;
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
 }
 
 .nav-head {
-	font-size: 25px;
-	font-weight: bold;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .main-section {
-	height: 88%;
-	width: 100%;
+  height: 88%;
+  width: 100%;
 }
 
 .main-head {
-	font-size: 60px;
-	font-weight: bold;
-	line-height: normal;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: normal;
 }
 
 .main-para {
-	color: lightgray;
-	font-size: 22px;
+  color: lightgray;
+  font-size: 22px;
 }
 
 .main-row {
-	height: 100%;
+  height: 100%;
 }
 
 .upper-btn-div {
-	max-width: 262px;
-	padding: 5px;
-	border: 1px solid #c41e3a;
+  max-width: 262px;
+  padding: 5px;
+  border: 1px solid #c41e3a;
 }
 
 .custom-btn {
-	min-width: 250px;
-	min-height: 50px;
-	border-radius: 0;
-	background-color: #c41e3a;
-	text-transform: uppercase;
-	color: lightgray;
+  min-width: 250px;
+  min-height: 50px;
+  border-radius: 0;
+  background-color: #c41e3a;
+  text-transform: uppercase;
+  color: lightgray;
 }
 
 .custom-col {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .all-cards {
-	padding: 10px;
+  padding-bottom: 10px;
 }
 
 .card-col {
-	display: flex;
-  	flex-wrap: nowrap; 
-  	overflow: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
 }
 
 .card {
-	flex: 0 0 auto;
-	width: 300px;
-	height: 350px;
-	padding: 0px 20px;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-	position: relative;
-	color: white;
-	border-radius: 0;
-	background-color: rgba(255, 255, 255, 0.3);
-	-webkit-backdrop-filter: blur(30px);
-  	backdrop-filter: blur(30px);  
+  flex: 0 0 auto;
+  width: 300px;
+  height: 350px;
+  padding: 0px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  color: white;
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
 }
 
 .card-title {
-	font-size: 22px;
-	font-weight: bold;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .card-body > p {
-	font-size: 18px;
+  font-size: 18px;
 }
 
-
 .card-body {
-	font-size: 18px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .card-btn {
-	border-radius: 0;
-	background-color: #c41e3a;
-	text-transform: uppercase;
-	color: white;
+  border-radius: 0;
+  background-color: #c41e3a;
+  text-transform: uppercase;
+  color: white;
 }
 
-
 @media (max-width: 900px) {
-	.main-head {
-		font-size: 40px;
-	}
+  .main-head {
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 768px) {
-	.custom-col {
-		height: 100%;
-		width: 100%;
-	}
+  .custom-col {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 @media (max-width: 460px) {
-	.main-head {
-		font-size: 30px;
-	}
+  .main-head {
+    font-size: 30px;
+  }
 
-	.main-para {
-		font-size: 16px;
-	}
+  .main-para {
+    font-size: 16px;
+  }
 
-	.custom-btn {
-		min-width: 150px;
-		height: 45px;
-	}
-	
-	.upper-btn-div {
-		width: 162px;
-		padding: 5px;
-		border: 1px solid #c41e3a;
-	}
+  .custom-btn {
+    min-width: 150px;
+    height: 45px;
+  }
+
+  .upper-btn-div {
+    width: 162px;
+    padding: 5px;
+    border: 1px solid #c41e3a;
+  }
 }
 
 .hide {
-	display: none;
+  display: none;
 }
 
 ::-webkit-scrollbar {
@@ -161,13 +164,13 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
- 
+
 ::-webkit-scrollbar-thumb {
   background: #c41e3a;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #252626; 
+  background: #252626;
 }
